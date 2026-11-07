@@ -1,0 +1,13 @@
+* NOR2 truth-table check
+.include /home/akshit/sky130_cell_library/harness/sky130_min.spice
+.include /home/akshit/sky130_cell_library/lvs/nor2/schematic.spice
+Xdut vdd a b y 0 nor2
+V1 vdd 0 1.8
+VA a 0 pulse(0 1.8 4n 0.1n 0.1n 4n 8n)
+VB b 0 pulse(0 1.8 8n 0.1n 0.1n 8n 16n)
+.tran 10p 16n
+.measure tran y_a0_b0 find v(y) at=3n
+.measure tran y_a1_b0 find v(y) at=7n
+.measure tran y_a0_b1 find v(y) at=11n
+.measure tran y_a1_b1 find v(y) at=15n
+.end

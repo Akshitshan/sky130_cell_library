@@ -1,0 +1,6 @@
+harness/wave.txt
+harness/deck.spice
+__pycache__/
+*.ext
+*.nodes
+*.sim
