@@ -7,15 +7,18 @@ HARN = ROOT + "/harness"
 
 
 def mag_area(path):
-    # bounding box of all painted rectangles
+    # bounding box of painted rectangles only; skips non-layout sections like checkpaint
     # unit size comes from the file's own "magscale a b" line: 0.01 um * a / b per unit
     xs, ys = [], []
     um_per_unit = 0.01
+    section = ""
     for line in open(path):
         p = line.split()
-        if p and p[0] == "magscale":
+        if line.startswith("<<"):
+            section = line.strip("<> \n")
+        elif p and p[0] == "magscale":
             um_per_unit = 0.01 * int(p[1]) / int(p[2])
-        elif p and p[0] == "rect":
+        elif p and p[0] == "rect" and section != "checkpaint" and not section.startswith("error"):
             x1, y1, x2, y2 = map(int, p[1:5])
             xs += [x1, x2]
             ys += [y1, y2]
@@ -27,6 +30,14 @@ CELLS = [
      "function": "!A", "sense": "negative_unate",
      "pins": {"A": "inv_x1/A"},
      "arcs": {"A": HARN + "/inv_x1_pex_tables.json"}},
+    {"name": "inv_x2", "mag": ROOT + "/magic_layout/inv_x2/inv_x2.mag",
+     "function": "!A", "sense": "negative_unate",
+     "pins": {"A": "inv_x2/A"},
+     "arcs": {"A": HARN + "/inv_x2_pex_tables.json"}},
+    {"name": "inv_x4", "mag": ROOT + "/magic_layout/inv_x4/inv_x4.mag",
+     "function": "!A", "sense": "negative_unate",
+     "pins": {"A": "inv_x4/A"},
+     "arcs": {"A": HARN + "/inv_x4_pex_tables.json"}},
     {"name": "nand2", "mag": ROOT + "/magic_layout/nand2/nand2.mag",
      "function": "!(A&B)", "sense": "negative_unate",
      "pins": {"A": "nand2/A", "B": "nand2/B"},

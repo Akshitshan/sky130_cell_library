@@ -21,7 +21,7 @@ N 10 0 90 -0 {lab=Vout}
 N 10 -110 10 -90 {lab=Vdd}
 N -90 0 -50 0 {lab=Vin}
 C {sky130_fd_pr/pfet_01v8.sym} -10 -60 0 0 {name=M1
-W=0.84
+W=1.68
 L=0.15
 nf=1
 mult=1
@@ -35,7 +35,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -10 60 0 0 {name=M2
-W=0.42
+W=0.84
 L=0.15
 nf=1 
 mult=1

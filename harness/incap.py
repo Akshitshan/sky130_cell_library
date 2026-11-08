@@ -1,7 +1,7 @@
 import os
 import re
 import json
-from run_sim import simulate, OURS_PEX, FOUNDRY_INV1, NAND2_A, NAND2_B, NOR2_A, NOR2_B
+from run_sim import simulate, OURS_PEX, FOUNDRY_INV1, NAND2_A, NAND2_B, NOR2_A, NOR2_B, INV_X2, INV_X4
 
 LIBFILE = os.path.expandvars("$PDK_ROOT/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib")
 
@@ -42,6 +42,8 @@ if __name__ == "__main__":
         "nand2/B": NAND2_B,
         "nor2/A": NOR2_A,
         "nor2/B": NOR2_B,
+        "inv_x2/A": INV_X2,
+        "inv_x4/A": INV_X4
     }
     out = {}
     for name, cell in pins.items():

@@ -4,7 +4,7 @@ from measure import read_wave
 
 LIB = os.path.expanduser("~/sky130_cell_library/harness/sky130_min.spice")
 OURS = {
-    "file": os.path.expanduser("~/sky130_cell_library/lvs/schematic.spice"),
+    "file": os.path.expanduser("~/sky130_cell_library/lvs/inverter/schematic.spice"),
     "inst": "Xdut vin vout vdd 0 inverter",
 }
 FOUNDRY_INV1 = {
@@ -18,6 +18,14 @@ FOUNDRY_INV1_SA = {
 OURS_PEX = {
     "file": os.path.expanduser("~/sky130_cell_library/harness/inverter_pex_sa.spice"),
     "inst": "Xdut vdd 0 vout vin inverter",
+}
+INV_X2 = {
+    "file": os.path.expanduser("~/sky130_cell_library/harness/inv_x2_pex_sa.spice"),
+    "inst": "Xdut vdd 0 vout vin inv_x2"
+}
+INV_X4 = {
+    "file": os.path.expanduser("~/sky130_cell_library/harness/inv_x4_pex_sa.spice"),
+    "inst": "Xdut vdd 0 vout vin inv_x4"
 }
 NAND2_A = {
     "file": os.path.expanduser("~/sky130_cell_library/harness/nand2_pex_sa.spice"),
