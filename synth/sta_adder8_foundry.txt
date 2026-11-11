@@ -1,0 +1,16 @@
+== foundry: 112 cells {'sky130_fd_sc_hd__inv_1': 34, 'sky130_fd_sc_hd__nand2_1': 63, 'sky130_fd_sc_hd__nor2_1': 15}
+   critical path: 892.9 ps to y[7] (fall edge), 14 cells deep
+     sky130_fd_sc_hd__inv_1     via pin A  output rise at 73.5 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output fall at 115.6 ps
+     sky130_fd_sc_hd__nand2_1   via pin B  output rise at 195.4 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output fall at 245.6 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output rise at 335.9 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output fall at 389.5 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output rise at 495.3 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output fall at 553.6 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output rise at 632.1 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output fall at 681.0 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output rise at 741.6 ps
+     sky130_fd_sc_hd__inv_1     via pin A  output fall at 777.0 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output rise at 817.7 ps
+     sky130_fd_sc_hd__nand2_1   via pin A  output fall at 892.9 ps

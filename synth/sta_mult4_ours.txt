@@ -1,0 +1,19 @@
+== ours: 155 cells {'inv_x1': 31, 'nand2': 89, 'nor2': 35}
+   critical path: 1156.0 ps to y[6] (rise edge), 17 cells deep
+     nand2                      via pin B  output rise at 115.5 ps
+     nor2                       via pin B  output fall at 210.1 ps
+     nor2                       via pin B  output rise at 307.8 ps
+     nand2                      via pin A  output fall at 356.2 ps
+     nand2                      via pin A  output rise at 434.0 ps
+     nand2                      via pin A  output fall at 480.4 ps
+     nand2                      via pin B  output rise at 552.8 ps
+     nand2                      via pin A  output fall at 608.3 ps
+     nand2                      via pin A  output rise at 673.3 ps
+     nand2                      via pin A  output fall at 733.3 ps
+     inv_x1                     via pin A  output rise at 793.9 ps
+     nor2                       via pin A  output fall at 871.6 ps
+     nand2                      via pin B  output rise at 939.1 ps
+     nor2                       via pin A  output fall at 991.0 ps
+     nor2                       via pin A  output rise at 1034.7 ps
+     nand2                      via pin A  output fall at 1072.0 ps
+     nand2                      via pin A  output rise at 1156.0 ps

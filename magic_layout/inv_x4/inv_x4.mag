@@ -1,9 +1,6 @@
 magic
 tech sky130A
-timestamp 1794117363
-<< checkpaint >>
-rect -696 999 699 1022
-rect -776 -980 781 999
+timestamp 1794118721
 << nwell >>
 rect -66 -59 69 392
 << nmos >>

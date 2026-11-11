@@ -1,0 +1,11 @@
+   eq: rise 630.99 ps, fall 457.01 ps
+   lt: rise 557.07 ps, fall 585.40 ps
+== foundry: 71 cells {'sky130_fd_sc_hd__inv_1': 21, 'sky130_fd_sc_hd__nand2_1': 34, 'sky130_fd_sc_hd__nor2_1': 16}
+   critical path: 631.0 ps to eq (rise edge), 7 cells deep
+     sky130_fd_sc_hd__nor2_1    via pin A  output rise at 119.7 ps
+     sky130_fd_sc_hd__nor2_1    via pin A  output fall at 176.0 ps
+     sky130_fd_sc_hd__nor2_1    via pin B  output rise at 277.5 ps
+     sky130_fd_sc_hd__inv_1     via pin A  output fall at 324.2 ps
+     sky130_fd_sc_hd__nor2_1    via pin B  output rise at 424.1 ps
+     sky130_fd_sc_hd__inv_1     via pin A  output fall at 470.7 ps
+     sky130_fd_sc_hd__nor2_1    via pin B  output rise at 631.0 ps

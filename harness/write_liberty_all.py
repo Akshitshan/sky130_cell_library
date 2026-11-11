@@ -83,7 +83,10 @@ def nums(xs):
 def table(kind, rows, pad):
     sp = " " * pad
     body = ", \\\n".join(sp + '    "' + nums(r) + '"' for r in rows)
-    return f"{sp}{kind} (del_template) {{\n{sp}  values ( \\\n{body} \\\n{sp}  );\n{sp}}}\n"
+    return (f"{sp}{kind} (del_template) {{\n"
+        f'{sp}  index_1 ("{nums(slews_ns)}");\n'
+        f'{sp}  index_2 ("{nums(loads_pF)}");\n'
+        f"{sp}  values ( \\\n{body} \\\n{sp}  );\n{sp}}}\n")
 
 
 def write_all(out_file):
@@ -96,7 +99,7 @@ def write_all(out_file):
         f.write(f'  cell ({c["name"]}) {{\n    area : {area:.3f};\n')
         for pin, key in c["pins"].items():
             f.write(f'    pin ({pin}) {{\n      direction : input;\n      capacitance : {pincaps[key]};\n    }}\n')
-        f.write(f'    pin (Y) {{\n      direction : output;\n      function : "{c["function"]}";\n      max_capacitance : {max(loads_pF)};\n')
+        f.write(f'    pin (Y) {{\n      direction : output;\n      function : "{c["function"]}";\n      max_capacitance : {max(loads_pF)};\n      max_transition : {max(slews_ns)};\n')
         for pin, tfile in c["arcs"].items():
             t = json.load(open(tfile))
             f.write(f'      timing () {{\n        related_pin : "{pin}";\n        timing_sense : {c["sense"]};\n')

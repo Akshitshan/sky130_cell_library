@@ -1,0 +1,12 @@
+   p: rise 583.21 ps, fall 548.05 ps
+== ours: 97 cells {'inv_x1': 19, 'nand2': 42, 'nor2': 36}
+   critical path: 583.2 ps to p (rise edge), 9 cells deep
+     nand2                      via pin B  output rise at 99.3 ps
+     inv_x1                     via pin A  output fall at 150.9 ps
+     nor2                       via pin A  output rise at 212.2 ps
+     nor2                       via pin A  output fall at 268.4 ps
+     nor2                       via pin B  output rise at 341.1 ps
+     nor2                       via pin A  output fall at 397.2 ps
+     nor2                       via pin B  output rise at 452.9 ps
+     nand2                      via pin A  output fall at 489.4 ps
+     nand2                      via pin B  output rise at 583.2 ps

@@ -1,6 +1,7 @@
-harness/wave.txt
-harness/deck.spice
 __pycache__/
-*.ext
-*.nodes
-*.sim
+*.pyc
+wave.txt
+deck.spice
+mcwave.txt
+mcdeck.spice
+synth/chain.*
